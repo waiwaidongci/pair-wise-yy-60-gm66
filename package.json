@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 62060",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p 62060"
+    "start": "next start -H 0.0.0.0 -p 62060",
+    "test:engine": "tsc lib/engine.ts lib/seed.ts lib/store.ts --outDir .engine-check --module commonjs --target es2019 --moduleResolution node --skipLibCheck --esModuleInterop && node scripts/engine-check.cjs"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
